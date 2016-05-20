@@ -1,0 +1,29 @@
+{
+  "name": "volox.io",
+  "version": "1.0.0",
+  "description": "Volox.io website",
+  "private": true,
+  "scripts": {
+    "server": "hs .",
+    "watch": "tsc && gulp && hs .",
+    "postinstall": "typings install && gulp && tsc",
+    "start": "npm run watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.volox.io/volox/website.git"
+  },
+  "author": "Volox",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^2.10.1",
+    "eslint-config-volox": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.4",
+    "http-server": "^0.9.0",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1"
+  }
+}

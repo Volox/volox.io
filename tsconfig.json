@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "target": "es5",
+    "noImplicitAny": true,
+    "pretty": true,
+    "sourceMap": true,
+    "watch": true,
+    "outDir": "js"
+  },
+  "files": [
+    "ts/script.ts",
+    "typings/browser.d.ts"
+  ]
+}
