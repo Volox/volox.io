@@ -5,7 +5,6 @@
     "noImplicitAny": true,
     "pretty": true,
     "sourceMap": true,
-    "watch": true,
     "outDir": "js"
   },
   "files": [

@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "server": "hs .",
-    "watch": "tsc && gulp && hs .",
-    "postinstall": "typings install && gulp && tsc",
-    "start": "npm run watch"
+    "deps": "typings install && bower i",
+    "build": "tsc && gulp",
+    "postinstall": "npm run deps && npm run build",
+    "start": "npm run server"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
   "author": "Volox",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.7.9",
     "eslint": "^2.10.1",
     "eslint-config-volox": "^2.0.0",
     "gulp": "^3.9.1",
