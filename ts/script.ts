@@ -30,14 +30,14 @@ function handleMouseMove( e: MouseEvent ) {
 function toggleFollow( e: MouseEvent ) {
   const isActive = logo.classList.contains( 'active' );
   if( isActive ) {
-    window.removeEventListener( 'mousemove touchmove', handleMouseMove );
+    window.removeEventListener( 'mousemove', handleMouseMove );
     logo.style.transform = '';
     logo.classList.remove( 'active' );
   } else {
     logo.classList.add( 'active' );
-    window.addEventListener( 'mousemove touchmove', handleMouseMove );
+    window.addEventListener( 'mousemove', handleMouseMove );
     handleMouseMove( e ); // Kick start
   }
 }
 
-window.addEventListener( 'click touchstart', toggleFollow );
+window.addEventListener( 'click', toggleFollow );
