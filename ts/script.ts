@@ -1,5 +1,3 @@
-console.log( 'Hi' );
-
 const MAX_DEG_X = 50;
 const MAX_DEG_Y = 50;
 
