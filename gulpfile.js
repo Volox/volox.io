@@ -3,7 +3,6 @@
 const gulp = require( 'gulp' );
 const sourcemaps = require( 'gulp-sourcemaps' );
 const autoprefixer = require( 'gulp-autoprefixer' );
-const ts = require( 'gulp-typescript' );
 
 
 // CSS
@@ -19,8 +18,8 @@ gulp.task( 'css', () => {
   .pipe( gulp.dest( CSS_DESTINATION ) );
 } );
 
-gulp.task( 'watch', [ 'css' ], () => {
-  gulp.watch( CSS_SOURCES, [ 'css' ] );
-} );
+gulp.task( 'watch', () =>
+  gulp.watch( CSS_SOURCES, gulp.series( 'css' ) )
+);
 
-gulp.task( 'default', [ 'css' ] );
+gulp.task( 'default', gulp.series( 'css' ) );

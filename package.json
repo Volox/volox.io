@@ -4,11 +4,8 @@
   "description": "Volox.io website",
   "private": true,
   "scripts": {
-    "server": "hs .",
-    "deps": "typings install && bower i",
     "build": "tsc && gulp",
-    "postinstall": "npm run deps && npm run build",
-    "start": "npm run server"
+    "postinstall": "npm run deps && npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,15 +14,9 @@
   "author": "Volox",
   "license": "MIT",
   "devDependencies": {
-    "bower": "^1.7.9",
-    "eslint": "^2.10.1",
-    "eslint-config-volox": "^2.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-typescript": "^2.13.4",
-    "http-server": "^0.9.0",
-    "typescript": "^1.8.10",
-    "typings": "^0.8.1"
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sourcemaps": "^1.7.3",
+    "typescript": "2"
   }
 }

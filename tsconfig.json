@@ -7,8 +7,7 @@
     "sourceMap": true,
     "outDir": "js"
   },
-  "files": [
-    "ts/script.ts",
-    "typings/browser.d.ts"
+  "include": [
+    "ts/**/*.ts"
   ]
 }
