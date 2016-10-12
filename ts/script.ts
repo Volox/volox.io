@@ -1,7 +1,10 @@
+interface NodeListOf<TNode extends Node> extends Array<TNode> {} // trick to work with for-of
+
 const MAX_DEG_X = 50;
 const MAX_DEG_Y = 50;
 
-const logo = <HTMLElement>document.getElementsByClassName( 'logo' )[ 0 ];
+const logo = document.querySelector( '.logo' ) as HTMLElement;
+const jobs = document.querySelectorAll( '.job > a' ) as NodeListOf<HTMLElement>;
 
 function handleMouseMove( e: MouseEvent ) {
   const x = e.pageX;
@@ -39,3 +42,7 @@ function toggleFollow( e: MouseEvent ) {
 }
 
 window.addEventListener( 'click', toggleFollow );
+for( const element of jobs ) {
+  element.addEventListener( 'mouseenter', toggleFollow );
+  element.addEventListener( 'mouseleave', toggleFollow );
+}

@@ -35,6 +35,7 @@ body, html {
 
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -96,4 +97,27 @@ body, html {
 
   transform-origin: 50% 50%;
   transform: translateZ(30px);
+}
+
+.job {
+  font-family: Station, Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  color: #fff;
+
+  max-width: 50%;
+  width: 80%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+
+
+}
+.job > a {
+  text-decoration: none;
+  color: #fff;
+
+  width: 30%;
+  text-align: center;
 }
