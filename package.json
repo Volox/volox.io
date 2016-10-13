@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "tsc && gulp",
-    "postinstall": "npm run deps && npm run build"
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
