@@ -43,6 +43,8 @@ body, html {
 
   cursor: default;
   user-select: none;
+
+  font-family: Station, Arial, Helvetica, sans-serif;
 }
 
 .logo {
@@ -58,7 +60,7 @@ body, html {
   transition-timing-function: ease-out;
 }
 .logo.active {
-  perspective: 200;
+  perspective: 200px;
   perspective-origin: 50% 50%;
   transform-origin: 50% 50%;
   transform-style: preserve-3d;
@@ -66,10 +68,11 @@ body, html {
 .logo > .name {
   display: flex;
   flex-wrap: nowrap;
+
+  transform-style: preserve-3d;
 }
 .logo > .name > .letter {
   color: #fff;
-  font-family: Station, Arial, Helvetica, sans-serif;
   font-size: 20vw;
   text-align: center;
 
@@ -98,9 +101,27 @@ body, html {
   transform-origin: 50% 50%;
   transform: translateZ(30px);
 }
+.logo.active > .bubble {
+  align-self: center;
+}
+.logo > .bubble::before {
+  visibility: hidden;
+  content: "-";
+  border-bottom: 1px dashed #999;
+  padding: 0.5rem;
+  color: #999;
+}
+.logo.active.cv > .bubble::before {
+  visibility: visible;
+  content: "- European format, full story -"
+}
+.logo.active.resume > .bubble::before {
+  visibility: visible;
+  content: "- One page, condensed cv -"
+}
+
 
 .job {
-  font-family: Station, Arial, Helvetica, sans-serif;
   font-size: 5rem;
   color: #fff;
 
@@ -112,7 +133,7 @@ body, html {
   justify-content: space-between;
   align-items: stretch;
 
-
+  z-index: 5; /* avoid flickering */
 }
 .job > a {
   text-decoration: none;
